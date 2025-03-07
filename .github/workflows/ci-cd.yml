@@ -33,7 +33,7 @@ jobs:
 
       - name: Run tests
         run: |
-          python -m unittest discover tests
+          pytest tests/
 
   build-docker:
     runs-on: ubuntu-latest
