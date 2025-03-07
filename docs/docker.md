@@ -1,5 +1,32 @@
 # Docker Guide
 
+## 🚀 Quick Start
+
+### Prerequisites
+- [Docker](https://www.docker.com/) installed
+- Python 3.9+
+
+### Run the Simulation
+1. Pull the Docker image:
+   ```bash
+   docker pull arupravy/hello-trading:latest
+   ```
+2. Start the container:
+   ```bash
+   docker run -it --rm arupravy/hello-trading
+   ```
+
+---
+
+???+ note "Advanced Configuration"
+    ```bash
+    # Custom strategy
+    docker run -e STRATEGY=advanced arupravy/hello-trading
+
+    # Persistent data
+    docker run -v ./data:/app/data arupravy/hello-trading
+    ```
+
 ## 🐳 Getting Started
 
 ### Prerequisites

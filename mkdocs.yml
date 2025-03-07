@@ -1,11 +1,12 @@
 site_name: Hello Trading Docs
 
-# Theme configuration (changed from readthedocs to material for better tab support)
+# Theme configuration
 theme:
   name: material
   features:
     - navigation.tabs
-    - content.code.annotate
+    - content.tabs  # Changed from content.code.annotate
+    - content.code.copy  # Added for copy-to-clipboard buttons
   palette:
     - scheme: default
       primary: indigo
@@ -14,11 +15,14 @@ theme:
 # Navigation
 nav:
   - Home: index.md
-  - Docker Guide: docker.md  # Example additional page
+  - Docker Guide: docker.md
 
 # Plugins
 plugins:
-  - mermaid2
+  - mermaid2:
+      arguments:  # Add Mermaid initialization
+        theme: dark
+        securityLevel: loose
 
 # Markdown extensions
 markdown_extensions:
@@ -26,9 +30,11 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format ''
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed
   - pymdownx.details
   - attr_list
   - md_in_html
   - admonition
+  - toc:
+      permalink: true
