@@ -1,4 +1,9 @@
-# Hello Trading
+# 🚀 Hello-Trading: LLM-Powered Trading Simulator 
+
+![CI/CD](https://img.shields.io/github/actions/workflow/status/Arupravy/hello-trading/ci-cd.yml?label=CI%2FCD&style=flat-square)  
+![License](https://img.shields.io/badge/License-MIT-blue.svg)  
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)  
+![Docker](https://img.shields.io/badge/Docker-Supported-green)
 
 A simple trading simulation project to demonstrate basic trading strategies. This project includes a Dockerized environment and a CI/CD pipeline for automated testing and deployment.
 
@@ -8,6 +13,33 @@ A simple trading simulation project to demonstrate basic trading strategies. Thi
 - **Docker Support**: Containerized environment for easy deployment.
 - **CI/CD Pipeline**: Automated testing and Docker image builds using GitHub Actions.
 
+## 📂 Project Structure (Scaffold)  
+
+```bash
+hello-trading/
+├── .github/
+│   └── workflows/
+│       └── ci-cd.yml          # GitHub Actions workflow for CI/CD
+├── src/
+│   ├── main.py                # Main entry point for the simulation
+│   ├── trading/
+│   │   ├── __init__.py         # Package initialization
+│   │   ├── simulator.py        # Trading simulator logic
+│   │   └── strategies/
+│   │       ├── __init__.py     # Strategies package initialization
+│   │       └── basic_strategy.py # Basic trading strategy implementation
+├── tests/
+│   ├── __init__.py             # Tests package initialization
+│   └── test_simulator.py       # Unit tests for the trading simulator
+├── scripts/
+│   └── run_simulation.sh       # Script to run the simulation
+├── Dockerfile                  # Dockerfile for containerizing the application
+├── .dockerignore               # Files to ignore in the Docker build
+├── requirements.txt            # Python dependencies
+├── setup.py                    # Setup file for editable installation
+├── LICENSE                     # MIT License file
+└── README.md                   # Project documentation (you are here)
+```
 ## Getting Started
 
 ### Prerequisites
