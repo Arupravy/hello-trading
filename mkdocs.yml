@@ -2,4 +2,3 @@ site_name: Hello Trading Docs
 theme: readthedocs
 nav:
   - Home: index.md
-  - Simulation: simulation.md

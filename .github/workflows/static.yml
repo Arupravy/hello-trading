@@ -32,18 +32,16 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          # Install static site generator (e.g., MkDocs or Sphinx)
           pip install mkdocs
 
       - name: Build static site
         run: |
-          # Generate HTML files (replace with your build command)
           mkdocs build --site-dir site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "site/"  # Upload the built static files
+          path: "site/"
 
       - name: Deploy to GitHub Pages
         id: deployment
