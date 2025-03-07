@@ -20,6 +20,7 @@ nav:
 # Plugins
 plugins:
   - mermaid2:
+      version: "10.6.1"
       arguments:  # Add Mermaid initialization
         theme: dark
         securityLevel: loose
@@ -31,7 +32,8 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.details
   - attr_list
   - md_in_html
