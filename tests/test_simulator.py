@@ -1,6 +1,6 @@
 import unittest
-from trading.simulator import TradingSimulator
-from trading.strategies.basic_strategy import BasicStrategy
+from src.trading.simulator import TradingSimulator
+from src.trading.strategies.basic_strategy import BasicStrategy
 
 class TestTradingSimulator(unittest.TestCase):
     def test_simulator_run(self):
