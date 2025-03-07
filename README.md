@@ -7,6 +7,9 @@
 
 A simple trading simulation project to demonstrate basic trading strategies. This project includes a Dockerized environment and a CI/CD pipeline for automated testing and deployment.
 
+## View live documentation:
+https://arupravy.github.io/hello-trading/
+
 ## Features
 
 - **Trading Simulation**: Simulates basic trading strategies.
@@ -19,7 +22,12 @@ A simple trading simulation project to demonstrate basic trading strategies. Thi
 hello-trading/
 ├── .github/
 │   └── workflows/
-│       └── ci-cd.yml          # GitHub Actions workflow for CI/CD
+│       ├── ci-cd.yml       # Main CI/CD (tests + Docker builds)
+│       └── static.yml      # Docs deployment workflow
+├── docs/
+│   ├── assets/             # Images/figures
+│   ├── docker.md           # Docker-specific documentation
+│   └── index.md            # Main documentation homepage
 ├── src/
 │   ├── main.py                # Main entry point for the simulation
 │   ├── trading/
@@ -31,6 +39,7 @@ hello-trading/
 ├── tests/
 │   ├── __init__.py             # Tests package initialization
 │   └── test_simulator.py       # Unit tests for the trading simulator
+├── mkdocs.yml                  # Docs configuration
 ├── scripts/
 │   └── run_simulation.sh       # Script to run the simulation
 ├── Dockerfile                  # Dockerfile for containerizing the application
